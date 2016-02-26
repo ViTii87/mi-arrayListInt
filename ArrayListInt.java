@@ -38,7 +38,7 @@ public class ArrayListInt
     }
     
     /**
-     * añade un elemento a la colección en la posición especificada por el parámetro index. 
+     * Metodo que añade un elemento a la colección en la posición especificada por el parámetro index. 
      * Si el valor de index no es válido, entonces no hace nada. Los elementos a continuación del añadido se desplazan una posición.
      */
     public void add(int index, int elemento)
@@ -64,5 +64,13 @@ public class ArrayListInt
             }
             arrayEnteros = aux;
         }
+    }
+    
+    /**
+     * Metodo que vacia nuestro array de enteros.
+     */
+    public void clear()
+    {
+        arrayEnteros = new int[0];
     }
 }
