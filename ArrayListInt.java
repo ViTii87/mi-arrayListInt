@@ -81,7 +81,8 @@ public class ArrayListInt
     {
         boolean contiene = false;
         int i = 0;
-        while(i < arrayEnteros.length)
+        int tamanho = arrayEnteros.length;
+        while(i < tamanho)
         {
             if(arrayEnteros[i] == elemento)
             {
@@ -90,5 +91,19 @@ public class ArrayListInt
             i++;
         }
         return contiene;
+    }
+    
+    /**
+     * Metodo que devuelve el elemento existente en la posición indicada. Si el valor de index no es válido, entonces devuelve -1.
+     */
+    public int get(int index)
+    {
+        int elemento = -1;
+        int tamanho = arrayEnteros.length;
+        if(index >= 0 && index < tamanho)
+        {
+            elemento = arrayEnteros[index];
+        }
+        return elemento;
     }
 }
