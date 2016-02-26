@@ -106,4 +106,16 @@ public class ArrayListInt
         }
         return elemento;
     }
+    
+    /**
+     * Metodo que reemplaza el elemento en la posición index con el valor de element. Si el índice no es válido, no hace nada.
+     */
+    public void set(int index, int element)
+    {
+        int tamanho = arrayEnteros.length;
+        if(index >= 0 && index < tamanho)
+        {
+            arrayEnteros[index] = element;
+        }
+    }
 }
