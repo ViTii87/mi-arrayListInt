@@ -167,13 +167,11 @@ public class ArrayListInt
             int[] aux = new int[tamanho-1];
             int i = 0;
             int auxIndex = 0;
-            boolean encontrado = false;
-            while(i < tamanho && !encontrado)
+            while(i < tamanho)
             {
                 if(i == index)
                 {
                     elemento = arrayEnteros[i];
-                    encontrado = true;
                 }
                 else
                 {
