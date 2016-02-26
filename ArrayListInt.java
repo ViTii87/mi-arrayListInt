@@ -36,4 +36,33 @@ public class ArrayListInt
         aux[tamanho] = elemento;
         arrayEnteros = aux;
     }
+    
+    /**
+     * añade un elemento a la colección en la posición especificada por el parámetro index. 
+     * Si el valor de index no es válido, entonces no hace nada. Los elementos a continuación del añadido se desplazan una posición.
+     */
+    public void add(int index, int elemento)
+    {
+        int tamanho = arrayEnteros.length;
+        if(index >= 0 && index <= tamanho)
+        {
+            int[] aux = new int[tamanho+1];
+            int i = 0;
+            int indexAux = 0;
+            while(i < tamanho+1)
+            {
+                if(i == index)
+                {
+                    aux[i] = elemento;
+                }
+                else
+                {
+                    aux[i] = arrayEnteros[indexAux];
+                    indexAux++;
+                }
+                i++;
+            }
+            arrayEnteros = aux;
+        }
+    }
 }
