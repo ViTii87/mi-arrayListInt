@@ -7,13 +7,33 @@
  */
 public class ArrayListInt
 {
- 
+    // Atributo para guardar una lista de enteros.
+    private int arrayEnteros[];
 
     /**
-     * Constructor for objects of class ArrayListInt
+     * Constructor for objects of class ArrayListInt, inicializamos el array con tamaño minimo.
      */
     public ArrayListInt()
     {
-      
+        arrayEnteros = new int[0];
+    }
+    
+    /**
+     * Metodo que añade un elemento a la colección al final de la misma.
+     * Obtenemos el tamaño del array principal, creamos un array auxiliar de tamaño 1 mas el tamaño del principal.
+     * Copiamos todos los elementos del principal al auxiliar.
+     * Finalmente le añadimos el ultimo elemento.
+     * Asignamos a nuestro array de enteros el auxiliar con el ultimo elemento añadido.
+     */
+    public void add(int elemento)
+    {
+        int tamanho = arrayEnteros.length;
+        int[] aux = new int[tamanho+1];
+        for(int i = 0;i < tamanho;i++)
+        {
+            aux[i] = arrayEnteros[i];
+        }
+        aux[tamanho] = elemento;
+        arrayEnteros = aux;
     }
 }
