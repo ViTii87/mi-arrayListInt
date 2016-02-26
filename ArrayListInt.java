@@ -73,4 +73,22 @@ public class ArrayListInt
     {
         arrayEnteros = new int[0];
     }
+    
+    /**
+     * Metodo que devuelve true si la colección contiene ese elemento, false en cualquier otro caso.
+     */
+    public boolean contains(int elemento)
+    {
+        boolean contiene = false;
+        int i = 0;
+        while(i < arrayEnteros.length)
+        {
+            if(arrayEnteros[i] == elemento)
+            {
+                contiene = true;
+            }
+            i++;
+        }
+        return contiene;
+    }
 }
