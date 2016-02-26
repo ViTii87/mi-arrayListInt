@@ -118,4 +118,26 @@ public class ArrayListInt
             arrayEnteros[index] = element;
         }
     }
+    
+    /**
+     * Metodo que devuelve el indice en el que aparece la primera ocurrencia del elemento especificado
+     * o -1 en caso de que la colección no contenga el elemento especificado.
+     */
+    public int indexOf(int elemento)
+    {
+        int index = -1;
+        int i = 0;
+        int tamanho = arrayEnteros.length;
+        boolean encontrado = false;
+        while(i < tamanho && !encontrado)
+        {
+            if(arrayEnteros[i] == elemento)
+            {
+                encontrado = true;
+                index = i;
+            }
+            i++;
+        }
+        return index;
+    }
 }
