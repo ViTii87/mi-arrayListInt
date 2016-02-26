@@ -140,4 +140,17 @@ public class ArrayListInt
         }
         return index;
     }
+    
+    /**
+     * Metodo que devuelve true si la lista no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        boolean vacio = true;
+        if(arrayEnteros.length != 0)
+        {
+            vacio = false;
+        }
+        return vacio;
+    }
 }
