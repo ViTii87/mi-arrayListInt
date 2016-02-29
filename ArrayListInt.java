@@ -82,7 +82,7 @@ public class ArrayListInt
         boolean contiene = false;
         int i = 0;
         int tamanho = arrayEnteros.length;
-        while(i < tamanho)
+        while(i < tamanho && !contiene)
         {
             if(arrayEnteros[i] == elemento)
             {
